@@ -107,6 +107,10 @@
   <img src="https://contrib.rocks/image?repo=Safe3/firefly&max=500">
 </a>
 </p>
+捐赠请扫描如下二维码：
+<img src="https://waf.uusec.com/_media/sponsor.jpg" alt="捐赠"  height="300px" />
+
+
 
 ## 联系
 
