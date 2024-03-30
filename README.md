@@ -2,7 +2,7 @@
   <br>
   <img src="https://github.com/Safe3/firefly/blob/main/logo.png" alt="firefly" width="70px">
 </h1>
-<h4 align="center">Firefly WireGuard Server</h4>
+<h4 align="center">萤火虫 WireGuard 服务器</h4>
 
 <p align="center">
 <a href="https://github.com/Safe3/firefly/releases"><img src="https://img.shields.io/github/downloads/Safe3/firefly/total">
@@ -12,13 +12,12 @@
 <a href="https://github.com/Safe3/firefly/discussions"><img src="https://img.shields.io/github/discussions/Safe3/firefly">
 </p>
 <p align="center">
-  <a href="#features">Features</a> •
-  <a href="#usage">Usage</a> •
-  <a href="#credits">Credits</a> •
-  <a href="#contact">Contact</a> •
-  <a href="#license">License</a>
+  <a href="#特色">特色</a> •
+  <a href="#使用">使用</a> •
+  <a href="#感谢">感谢</a> •
+  <a href="#联系">联系</a> •
+  <a href="#授权">授权</a>
 </p>
-
 
 
 
@@ -32,11 +31,11 @@
 
 ---
 
-Firefly is a simple and easy to install WireGuard server software, which can be widely used in scenarios such as remote networking, remote work, and  expose a local server behind a NAT or firewall to the internet.
+萤火虫是一款简单、易架设的 WireGuard 服务端软件，可广泛用于异地组网、远程办公、内网穿透等场景。
 
 
 
-## Features
+## 特色
 
 <h3 align="center">
   <img src="https://github.com/Safe3/firefly/blob/main/firefly.png" alt="firefly" width="700px">
@@ -44,81 +43,100 @@ Firefly is a simple and easy to install WireGuard server software, which can be 
 </h3>
 
 
- - Provide a simple and easy-to-use web management UI
- - Supports access to all WireGuard clients
- - No need for system installation of WireGuard components
- - Single file, no additional library dependencies
+ - 提供简单、易用的web管理后台
+ - 支持所有 WireGuard 客户端接入
+ - 无需系统安装 WireGuard 组件
+ - 单文件、无额外库依赖
 
 
 
 
 
-## Usage
+## 使用
 
-Firefly supports CPU architecture environments such as Linux x86 and ARM. The download address for the Firefly server is: https://github.com/Safe3/firefly/releases , WireGuard client download address: https://www.wireguard.com/install/ .
-
-
+萤火虫支持Linux x86、ARM等CPU架构环境，萤火虫服务端和WireGuard客户端下载地址:  https://github.com/Safe3/firefly/releases  ,其中以firefly-x-x开头的是服务端，包含wireguard名称的是客户端。
 
 
 
+### 服务端安装
+
+选择对应的服务端，如x86环境请下载firefly-linux-amd64
+
+前台运行：./firefly-linux-amd64
+
+后台运行：nohup ./firefly-linux-amd64 >/dev/null 2>&1 &
+
+访问 http://ip:50121 登录管理后台，默认密码firefly
 
 
-### Server Configuration
 
-The first time running firefly will generate a config.json configuration file in the software root directory, as follows:
+
+### 服务端配置
+
+首次运行firefly会在软件根目录生成config.json配置文件，配置说明如下：
 
 ```json
 {
- "version": "1",              // Firefly current version
- "host": "7.7.7.7",           // Firefly web management IP or domain name
- "port": 50121,               // Firefly web management port
- "auto_ssl": false,           // Is the firefly web enabled to automatically obtain Let's Encrypt certificate issuance? If enabled, please change the port to 443
- "password": "firefly",       // Firefly web management login authentication password
- "lang": "en",                // Firefly web management UI language
- "log_level": "error",        // Firefly server logging level
- "wg_private_key": "YBw5KAo1vM2mz35GLhZB01ZNYWJYWdGZNQT1MebuCHk=",  // WireGuard server private key
- "wg_device": "eth0",                   // WireGuard server in/out traffic network card name
- "wg_port": 50120,                      // WireGuard server UDP port
- "wg_mtu": 1280,                        // WireGuard server MTU value
- "wg_persistent_keepalive": 25,         // WireGuard client keepalive packet sending interval time
- "wg_address": "198.18.0.1/16",         // WireGuard server IP and network range
- "wg_dns": "1.1.1.1",                   // WireGuard client DNS configuration
- "wg_allowed_ips": "0.0.0.0/0, ::/0"    // WireGuard client allowed ips
+ "version": "1",              // 萤火虫当前版本
+ "host": "7.7.7.7",           // 萤火虫web管理后台ip或域名
+ "port": 50121,               // 萤火虫web管理后台端口
+ "auto_ssl": false,           // 萤火虫web管理后台是否启用自动获取Let's Encrypt签发证书，若启用请将端口改为443
+ "password": "firefly",       // 萤火虫web管理后台登录认证密码
+ "lang": "en",                // 萤火虫web管理后台多语言支持，中文请将en改为cn
+ "log_level": "error",        // 萤火虫服务端日志记录等级
+ "wg_private_key": "YBw5KAo1vM2mz35GLhZB01ZNYWJYWdGZNQT1MebuCHk=",  // 萤火虫服务端 WireGuard 私钥
+ "wg_device": "eth0",                   // 萤火虫服务端 WireGuard 出入流量网卡名称
+ "wg_port": 50120,                      // 萤火虫服务端 WireGuard UDP端口
+ "wg_mtu": 1280,                        // 萤火虫服务端 WireGuard MTU值
+ "wg_persistent_keepalive": 25,         // 萤火虫客户端存活包发送间隔时间
+ "wg_address": "198.18.0.1/16",         // 萤火虫服务端ip和网段范围
+ "wg_dns": "1.1.1.1",                   // 萤火虫客户端dns配置
+ "wg_allowed_ips": "0.0.0.0/0, ::/0"    // 萤火虫客户端流量要转发到服务端的ip地址范围
 }
 ```
 
 
 
-### Client configuration
+### 客户端安装
 
-After creating multiple clients in the web management UI on the server side, import the WireGuard client configuration in the following way.
-
-1.WireGuard mobile client can directly scan the firefly web QR code to import configuration
-
-2.WireGuard PC client can download the firefly web configuration file to the local device and import the configuration
+萤火虫的客户端为WireGuard官方客户端，支持Windows、Linux、Mac、iOS、Android，这里以Windows为例，对应的客户端为wireguard-amd64-0.5.3.msi ，下载后根据提示一步步安装。
 
 
 
+### 客户端配置
+
+登录萤火虫服务端web管理后台，新建2个客户端，通过以下方式导入WireGuard客户端配置。
+
+1.移动客户端可直接扫描萤火虫后台二维码导入配置
+
+2.PC客户端可下载萤火虫后台配置文件到本地后导入配置
+
+两个客户端开启之后，可以通过萤火虫服务端分配的ip 198.18.0.x 直接相互访问
 
 
-## Credits
 
-Thanks to all the amazing [community contributors for sending PRs](https://github.com/Safe3/firefly/graphs/contributors) and keeping this project updated. ❤️
+## 感谢
 
-If you have an idea or some kind of improvement, you are welcome to contribute and participate in the Project, feel free to send your PR.
+感谢所有了不起的[社区贡献者发送PR](https://github.com/safe3/cvs/graphs/contributors)并不断更新此项目。请支持我们的朋友点个 :heart: 赞。
+
+如果你有想法或某种改进，欢迎你贡献并参与该项目，随时发送你的PR。
 
 <p align="center">
 <a href="https://github.com/Safe3/firefly/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=Safe3/firefly&max=500">
 </a>
 </p>
-
-## Contact
-
-If you want to support more features such as access controling, advanced routing, bastion machines, peer-to-peer transmission, etc., please contact us.
+捐赠请扫描如下二维码：
+<img src="https://waf.uusec.com/_media/sponsor.jpg" alt="捐赠"  height="300px" />
 
 
 
-## License
+## 联系
 
-Firefly is only for personal free use. If you want to use it for commercial purposes, please contact us for commercial authorization.
+若想支持更多功能，如权限分组、高级路由、堡垒机、点对点传输等，请访问: https://fahi.uusec.com
+
+
+
+## 授权
+
+firefly 仅用于个人免费使用，如要进行商业用途请联系我们获取商业授权。
