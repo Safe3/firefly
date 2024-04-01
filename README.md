@@ -62,6 +62,8 @@
 
 选择对应的服务端，如x86环境请下载firefly-linux-amd64
 
+添加可执行权限：chmod +x ./firefly-linux-amd64
+
 前台运行：./firefly-linux-amd64
 
 后台运行：nohup ./firefly-linux-amd64 >/dev/null 2>&1 &
