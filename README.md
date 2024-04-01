@@ -24,8 +24,8 @@
 
 
 <p align="center">
-  <a href="https://github.com/Safe3/firefly/blob/main/README.md">English</a>
-  <a href="https://github.com/Safe3/firefly/blob/main/README_CN.md">中文</a>
+  <a href="https://github.com/Safe3/firefly/blob/main/README_EN.md">English</a>
+  <a href="https://github.com/Safe3/firefly/blob/main/README.md">中文</a>
 </p>
 
 
