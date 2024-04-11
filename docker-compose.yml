@@ -1,0 +1,22 @@
+version: '3'
+services:
+  firefly:
+    image: "uusec/firefly:latest"
+    container_name: firefly-server
+    devices:
+      - /dev/net/tun
+    network_mode: host
+    volumes:
+      - /lib/modules:/lib/modules
+      - /etc/firefly:/firefly/conf
+    cap_add:
+      - NET_ADMIN
+      - SYS_MODULE
+    restart: unless-stopped
+    environment:
+      #- TZ=Asia/Shanghai
+      #- FIREFLY_DEVICE=eth0
+      - FIREFLY_PASSWORD=firefly
+      #- FIREFLY_AUTO_SSL=false
+      #- FIREFLY_PORT=50121
+  

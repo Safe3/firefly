@@ -68,6 +68,8 @@
 
 后台运行：nohup ./firefly-linux-amd64 >/dev/null 2>&1 &
 
+容器中运行：下载docker-compose.yml文件然后执行docker compose up -d
+
 访问 http://ip:50121 登录管理后台，默认密码firefly
 
 
