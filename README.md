@@ -77,7 +77,7 @@
 
 ### 服务端配置
 
-首次运行firefly会在软件根目录生成config.json配置文件，配置说明如下：
+首次运行firefly会在软件目录生成conf/config.json配置文件，配置说明如下：
 
 ```json
 {
