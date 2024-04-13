@@ -37,17 +37,22 @@
 
 ## :dart: 特色
 
+ :green_circle: 提供简单、易用的web管理后台
+
+ :purple_circle: 支持所有 WireGuard 客户端接入
+
+ :yellow_circle: 无需系统安装 WireGuard 组件
+
+ :orange_circle: 单文件、无额外库依赖
+
+ :red_circle: 自动申请免费SSL证书
+
+
+
 <h3 align="center">
   <img src="https://github.com/Safe3/firefly/blob/main/firefly.png" alt="firefly" width="700px">
   <br>
 </h3>
-
-
- - 提供简单、易用的web管理后台
- - 支持所有 WireGuard 客户端接入
- - 无需系统安装 WireGuard 组件
- - 单文件、无额外库依赖
-
 
 
 
