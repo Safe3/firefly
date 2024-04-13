@@ -12,11 +12,11 @@
 <a href="https://github.com/Safe3/firefly/discussions"><img src="https://img.shields.io/github/discussions/Safe3/firefly">
 </p>
 <p align="center">
-  <a href="#特色">特色</a> •
-  <a href="#使用">使用</a> •
-  <a href="#感谢">感谢</a> •
-  <a href="#联系">联系</a> •
-  <a href="#授权">授权</a>
+  <a href="# :dart: 特色">特色</a> •
+  <a href="# :rocket: 使用">使用</a> •
+  <a href="# :gift_heart: 感谢">感谢</a> •
+  <a href="# :kissing_heart: 联系">联系</a> •
+  <a href="# :key: 授权">授权</a>
 </p>
 
 
@@ -35,7 +35,7 @@
 
 
 
-## 特色
+## :dart: 特色
 
 <h3 align="center">
   <img src="https://github.com/Safe3/firefly/blob/main/firefly.png" alt="firefly" width="700px">
@@ -52,7 +52,7 @@
 
 
 
-## 使用
+## :rocket: 使用
 
 萤火虫支持Linux x86、ARM等CPU架构环境，萤火虫服务端和WireGuard客户端下载地址:  https://github.com/Safe3/firefly/releases  ,其中以firefly-x-x开头的是服务端，包含wireguard名称的是客户端。
 
@@ -121,7 +121,7 @@
 
 
 
-## 感谢
+## :gift_heart: 感谢
 
 感谢所有了不起的[社区贡献者发送PR](https://github.com/safe3/cvs/graphs/contributors)并不断更新此项目。请支持我们的朋友点个 :heart: 赞。
 
@@ -137,12 +137,22 @@
 
 
 
-## 联系
+## :kissing_heart: 联系
 
 若想支持更多功能，如权限分组、高级路由、堡垒机、点对点传输等，请访问: https://fahi.uusec.com
 
+- 问题提交：https://github.com/Safe3/uuWAF/issues
+
+- 讨论社区：https://github.com/Safe3/uuWAF/discussions
+
+- 官方 QQ 群：11500614
+
+- 官方微信群：微信扫描以下二维码加入
+
+  <img src="https://waf.uusec.com/_media/weixin.jpg" alt="微信群"  height="200px" />
 
 
-## 授权
+
+## :key: 授权
 
 firefly 仅用于个人免费使用，如要进行商业用途请联系我们获取商业授权。
