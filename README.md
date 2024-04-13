@@ -48,7 +48,7 @@
  :red_circle: 自动申请免费SSL证书
 
 
-### 管理界面
+
 <h3 align="center">
   <img src="https://github.com/Safe3/firefly/blob/main/firefly.png" alt="firefly" width="700px">
   <br>
@@ -77,7 +77,7 @@
 
 访问 http://ip:50121 登录管理后台，默认密码firefly
 
-***如果服务器使用的是各种云服务，记得在云服务管理后台上开放萤火虫所需的udp端口50120、tcp端口50121***
+> ***如果服务器使用的是各种云服务，记得在云服务管理后台上开放萤火虫所需的udp端口50120、tcp端口50121***
 
 
 
