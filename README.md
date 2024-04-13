@@ -12,11 +12,11 @@
 <a href="https://github.com/Safe3/firefly/discussions"><img src="https://img.shields.io/github/discussions/Safe3/firefly">
 </p>
 <p align="center">
-  <a href="# :dart: 特色">特色</a> •
-  <a href="# :rocket: 使用">使用</a> •
-  <a href="# :gift_heart: 感谢">感谢</a> •
-  <a href="# :kissing_heart: 联系">联系</a> •
-  <a href="# :key: 授权">授权</a>
+  <a href="#dart-特色">特色</a> •
+  <a href="#rocket-使用">使用</a> •
+  <a href="#gift_heart-感谢">感谢</a> •
+  <a href="#kissing_heart-联系">联系</a> •
+  <a href="#key-授权">授权</a>
 </p>
 
 
