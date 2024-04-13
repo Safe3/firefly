@@ -146,9 +146,9 @@
 
 若想支持更多功能，如权限分组、高级路由、堡垒机、点对点传输等，请访问: https://fahi.uusec.com
 
-- 问题提交：https://github.com/Safe3/uuWAF/issues
+- 问题提交：https://github.com/Safe3/firefly/issues
 
-- 讨论社区：https://github.com/Safe3/uuWAF/discussions
+- 讨论社区：https://github.com/Safe3/firefly/discussions
 
 - 官方 QQ 群：11500614
 
