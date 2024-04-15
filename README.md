@@ -50,7 +50,7 @@
 
 
 <h3 align="center">
-  <img src="https://github.com/Safe3/firefly/blob/main/firefly.png" alt="firefly" width="700px">
+  <img src="https://github.com/Safe3/firefly/blob/main/firefly_cn.png" alt="firefly" width="700px">
   <br>
 </h3>
 
@@ -94,6 +94,8 @@
  "auto_ssl": false,           // 萤火虫web管理后台是否启用自动获取Let's Encrypt签发证书，若启用请将端口改为443
  "password": "firefly",       // 萤火虫web管理后台登录认证密码
  "lang": "en",                // 萤火虫web管理后台多语言支持，中文请将en改为cn
+ "ui_traffic_stats": true,    // 萤火虫web管理后台是否开启流量图特效
+ "ui_chart_type": 2,          // 萤火虫web管理后台流量特效图类型
  "log_level": "error",        // 萤火虫服务端日志记录等级
  "wg_private_key": "YBw5KAo1vM2mz35GLhZB01ZNYWJYWdGZNQT1MebuCHk=",  // 萤火虫服务端 WireGuard 私钥
  "wg_device": "eth0",                   // 萤火虫服务端 WireGuard 出入流量网卡名称

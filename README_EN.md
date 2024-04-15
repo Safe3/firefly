@@ -12,11 +12,11 @@
 <a href="https://github.com/Safe3/firefly/discussions"><img src="https://img.shields.io/github/discussions/Safe3/firefly">
 </p>
 <p align="center">
-  <a href="#features">Features</a> •
-  <a href="#usage">Usage</a> •
-  <a href="#credits">Credits</a> •
-  <a href="#contact">Contact</a> •
-  <a href="#license">License</a>
+  <a href="#dart-features">Features</a> •
+  <a href="#rocket-usage">Usage</a> •
+  <a href="#gift_heart-credits">Credits</a> •
+  <a href="#kissing_heart-contact">Contact</a> •
+  <a href="#key-license">License</a>
 </p>
 
 
@@ -36,7 +36,7 @@ Firefly is a simple and easy to install WireGuard server software, which can be 
 
 
 
-## Features
+## :dart: Features
 
 <h3 align="center">
   <img src="https://github.com/Safe3/firefly/blob/main/firefly.png" alt="firefly" width="700px">
@@ -44,28 +44,59 @@ Firefly is a simple and easy to install WireGuard server software, which can be 
 </h3>
 
 
- - Provide a simple and easy-to-use web management UI
- - Supports access to all WireGuard clients
- - No need for system installation of WireGuard components
- - Single file, no additional library dependencies
+ :green_circle: Provide a simple and easy-to-use web management UI
+
+ :purple_circle: Supports access to all WireGuard clients
+
+ :yellow_circle: No need for system installation of WireGuard components
+
+ :orange_circle: Single file, no additional library dependencies
+
+ :red_circle: Automatically apply for free SSL certificate
 
 
 
 
 
-## Usage
+## :rocket: Usage
 
 Firefly supports CPU architecture environments such as Linux x86 and ARM. The download address for the Firefly server is: https://github.com/Safe3/firefly/releases , WireGuard client download address: https://www.wireguard.com/install/ .
 
 
+- ### Server Installation
+
+Select the corresponding server, such as x86 environment, please download firefly-linux-amd64
+
+Add executable permissions：
+
+```bash
+chmod +x ./firefly-linux-amd64
+```
+
+Run frontend：
+
+```bash
+./firefly-linux-amd64
+```
+
+Run backend：
+
+```bash
+nohup ./firefly-linux-amd64 >/dev/null 2>&1 &
+```
+
+Run in container：download docker-compose.yml and execute "docker compose up -d"
+
+Visit http://ip:50121 ,login to the management backend with the default password firefly
+
+> :biohazard: ***If the server is using cloud services, remember to open the UDP port 50120 and TCP port 50121 required for Firefly***
 
 
 
 
+- ### Server Configuration
 
-### Server Configuration
-
-The first time running firefly will generate a config.json configuration file in the software root directory, as follows:
+The first time running firefly will generate a conf/config.json configuration file in the software root directory, as follows:
 
 ```json
 {
@@ -75,6 +106,8 @@ The first time running firefly will generate a config.json configuration file in
  "auto_ssl": false,           // Is the firefly web enabled to automatically obtain Let's Encrypt certificate issuance? If enabled, please change the port to 443
  "password": "firefly",       // Firefly web management login authentication password
  "lang": "en",                // Firefly web management UI language
+ "ui_traffic_stats": true,    // Firefly web management traffic chart switch
+ "ui_chart_type": 2,          // Firefly web management traffic chart type
  "log_level": "error",        // Firefly server logging level
  "wg_private_key": "YBw5KAo1vM2mz35GLhZB01ZNYWJYWdGZNQT1MebuCHk=",  // WireGuard server private key
  "wg_device": "eth0",                   // WireGuard server in/out traffic network card name
@@ -89,7 +122,7 @@ The first time running firefly will generate a config.json configuration file in
 
 
 
-### Client configuration
+- ### Client configuration
 
 After creating multiple clients in the web management UI on the server side, import the WireGuard client configuration in the following way.
 
@@ -101,7 +134,7 @@ After creating multiple clients in the web management UI on the server side, imp
 
 
 
-## Credits
+## :gift_heart: Credits
 
 Thanks to all the amazing [community contributors for sending PRs](https://github.com/Safe3/firefly/graphs/contributors) and keeping this project updated. ❤️
 
@@ -113,12 +146,12 @@ If you have an idea or some kind of improvement, you are welcome to contribute a
 </a>
 </p>
 
-## Contact
+## :kissing_heart: Contact
 
 If you want to support more features such as access controling, advanced routing, bastion machines, peer-to-peer transmission, etc., please contact us.
 
 
 
-## License
+## :key: License
 
 Firefly is only for personal free use. If you want to use it for commercial purposes, please contact us for commercial authorization.
