@@ -82,7 +82,11 @@ Run backend：
 nohup ./firefly-linux-amd64 >/dev/null 2>&1 &
 ```
 
-Run in container：download docker-compose.yml and execute "docker compose up -d"
+Run in container：download docker-compose.yml and execute 
+
+```bash
+docker compose up -d
+```
 
 Visit http://ip:50121 ,login to the management backend with the default password firefly
 

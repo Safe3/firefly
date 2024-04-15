@@ -67,13 +67,29 @@
 
 选择对应的服务端，如x86环境请下载firefly-linux-amd64
 
-添加可执行权限：chmod +x ./firefly-linux-amd64
+添加可执行权限：
 
-前台运行：./firefly-linux-amd64
+```bash
+chmod +x ./firefly-linux-amd64
+```
 
-后台运行：nohup ./firefly-linux-amd64 >/dev/null 2>&1 &
+前台运行：
 
-容器中运行：下载docker-compose.yml文件然后执行docker compose up -d
+```bash
+./firefly-linux-amd64
+```
+
+后台运行：
+
+```bash
+nohup ./firefly-linux-amd64 >/dev/null 2>&1 &
+```
+
+容器中运行：下载docker-compose.yml文件然后执行
+
+```bash
+docker compose up -d
+```
 
 访问 http://ip:50121 登录管理后台，默认密码firefly
 
