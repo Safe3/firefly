@@ -155,4 +155,4 @@ If you want to support more features such as access controling, advanced routing
 
 ## :key: License
 
-Firefly is only for personal free use. If you want to use it for commercial purposes, please contact us for commercial authorization.
+Firefly is only for personal free use. The front-end of this project is sourced from [wg easy]( https://github.com/wg-easy/wg-easy) ,follow the original project CC 4.0 license.
