@@ -178,4 +178,4 @@ docker compose up -d
 
 ## :key: 授权
 
-萤火虫仅用于个人免费使用，本项目前端部分来源于[wg-easy](https://github.com/wg-easy/wg-easy) ，遵循原项目CC 4.0协议。
+萤火虫仅用于个人免费使用，本项目前端部分来源于[wg-easy](https://github.com/wg-easy/wg-easy) ，遵循原项目CC 4.0协议，感谢原作者Emile Nijssen！
