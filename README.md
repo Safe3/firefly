@@ -104,7 +104,7 @@ docker compose up -d
 
 ```json
 {
- "version": "1",              // 萤火虫当前版本
+ "version": 3.1,              // 萤火虫当前版本
  "host": "7.7.7.7",           // 萤火虫web管理后台ip或域名
  "port": 50121,               // 萤火虫web管理后台端口
  "auto_ssl": false,           // 萤火虫web管理后台是否启用自动获取Let's Encrypt签发证书，若启用请将端口改为443

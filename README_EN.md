@@ -101,7 +101,7 @@ The first time running firefly will generate a conf/config.json configuration fi
 
 ```json
 {
- "version": "1",              // Firefly current version
+ "version": 3.1,              // Firefly current version
  "host": "7.7.7.7",           // Firefly web management IP or domain name
  "port": 50121,               // Firefly web management port
  "auto_ssl": false,           // Is the firefly web enabled to automatically obtain Let's Encrypt certificate issuance? If enabled, please change the port to 443
