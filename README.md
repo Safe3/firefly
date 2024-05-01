@@ -65,7 +65,7 @@
 
 - ### 服务端安装
 
-选择对应的服务端，如x86环境请下载firefly-linux-amd64
+准备一台公网IP服务器，选择对应的CPU架构，如x86环境请下载firefly-linux-amd64
 
 添加可执行权限：
 
@@ -107,7 +107,7 @@ docker compose up -d
  "version": 3.1,              // 萤火虫当前版本
  "host": "7.7.7.7",           // 萤火虫web管理后台ip或域名
  "port": 50121,               // 萤火虫web管理后台端口
- "auto_ssl": false,           // 萤火虫web管理后台是否启用自动获取Let's Encrypt签发证书，若启用请将端口改为443
+ "auto_ssl": false,           // 萤火虫web管理后台是否启用自动获取Let's Encrypt签发证书，若启用请将web端口改为443
  "password": "firefly",       // 萤火虫web管理后台登录认证密码
  "lang": "en",                // 萤火虫web管理后台多语言支持，中文请将en改为cn
  "ui_traffic_stats": true,    // 萤火虫web管理后台是否开启流量图特效
@@ -118,9 +118,9 @@ docker compose up -d
  "wg_port": 50120,                      // 萤火虫服务端 WireGuard UDP端口
  "wg_mtu": 1280,                        // 萤火虫服务端 WireGuard MTU值
  "wg_persistent_keepalive": 25,         // 萤火虫客户端存活包发送间隔时间
- "wg_address": "198.18.0.1/16",         // 萤火虫服务端ip和网段范围
+ "wg_address": "198.18.0.1/16",         // 萤火虫客户端虚拟ip网段范围
  "wg_dns": "1.1.1.1",                   // 萤火虫客户端dns配置
- "wg_allowed_ips": "0.0.0.0/0, ::/0"    // 萤火虫客户端流量要转发到服务端的ip地址范围
+ "wg_allowed_ips": "0.0.0.0/0, ::/0"    // 萤火虫客户端要转发流量到服务端的ip地址范围，默认所有流量
 }
 ```
 
