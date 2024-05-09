@@ -162,7 +162,7 @@ docker compose up -d
 
 ## :kissing_heart: 联系
 
-若想支持更多功能，如权限分组、高级路由、堡垒机、点对点传输等，请访问: https://fahi.uusec.com
+若想支持更多功能，如权限分组、高级路由、堡垒机、点对点传输等，请访问鹊桥: https://qq.uusec.com
 
 - 问题提交：https://github.com/Safe3/firefly/issues
 
