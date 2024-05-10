@@ -69,6 +69,20 @@ func LoadOrCreate() (*Config, error) {
 			autoSSL = true
 		}
 
+		defaultDNS := strings.ToLower(os.Getenv("FIREFLY_DNS"))
+		if defaultDNS == "" {
+			defaultDNS = "8.8.8.8,1.1.1.1"
+		}
+		defaultWGServer := strings.ToLower(os.Getenv("FIREFLY_SERVER"))
+		if defaultWGServer == "" {
+			defaultWGServer = "198.18.0.1/16"
+		}
+
+		defaultAllowedIPs := strings.ToLower(os.Getenv("FIREFLY_ALLOWED_IPS"))
+		if defaultAllowedIPs == "" {
+			defaultAllowedIPs = "0.0.0.0/0, ::/0"
+		}
+
 		cfg = Config{
 			Version:               "2",
 			Host:                  host,
@@ -82,9 +96,9 @@ func LoadOrCreate() (*Config, error) {
 			WgPort:                50120,
 			WgMTU:                 1280,
 			WgPersistentKeepalive: 25,
-			WgAddress:             "198.18.0.1/16",
-			WgDNS:                 "1.1.1.1",
-			WgAllowedIPs:          "0.0.0.0/0, ::/0",
+			WgAddress:             defaultWGServer,
+			WgDNS:                 defaultDNS,
+			WgAllowedIPs:          defaultAllowedIPs,
 		}
 
 		err = Save(&cfg)
