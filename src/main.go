@@ -39,7 +39,7 @@ func main() {
 	}
 
 	termCh := make(chan os.Signal, 1)
-	signal.Notify(termCh, syscall.SIGHUP, syscall.SIGINT, syscall.SIGTERM, syscall.SIGQUIT, syscall.SIGTSTP)
+	signal.Notify(termCh, syscall.SIGINT, syscall.SIGTERM)
 	go func() {
 		select {
 		case <-termCh:
