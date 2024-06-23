@@ -2,7 +2,7 @@
   <br>
   <img src="https://github.com/Safe3/firefly/blob/main/logo.png" alt="firefly" width="70px">
 </h1>
-<h4 align="center">萤火虫 WireGuard 服务器</h4>
+<h4 align="center">萤火虫 WireGuard Server</h4>
 
 <p align="center">
 <a href="https://github.com/Safe3/firefly/releases"><img src="https://img.shields.io/github/downloads/Safe3/firefly/total">
