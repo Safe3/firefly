@@ -148,9 +148,7 @@ docker compose up -d
 
 ## :gift_heart: 感谢
 
-感谢所有了不起的[社区贡献者发送PR](https://github.com/safe3/cvs/graphs/contributors)并不断更新此项目。请支持我们的朋友点个 :heart: 赞。
-
-如果你有想法或某种改进，欢迎你贡献并参与该项目，随时发送你的PR。
+请支持我们的朋友点个 :heart: 赞如果，你有想法或某种改进，欢迎你贡献并参与该项目，随时发送你的PR。
 
 <p align="center">
 <a href="https://github.com/Safe3/firefly/graphs/contributors">
@@ -180,4 +178,4 @@ docker compose up -d
 
 ## :key: 授权
 
-萤火虫仅用于个人免费使用，本项目前端部分来源于[wg-easy](https://github.com/wg-easy/wg-easy) ，遵循原项目CC 4.0协议，感谢原作者Emile Nijssen！
+萤火虫仅限于个人免费使用！
