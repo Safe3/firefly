@@ -148,7 +148,7 @@ docker compose up -d
 
 ## :gift_heart: 感谢
 
-请支持我们的朋友点个 :heart: 赞如果，你有想法或某种改进，欢迎你贡献并参与该项目，随时发送你的PR。
+请支持我们的朋友点个 :heart: 赞，如果你有想法或某些改进，欢迎你贡献并参与该项目，随时发送你的PR。
 
 <p align="center">
 <a href="https://github.com/Safe3/firefly/graphs/contributors">
