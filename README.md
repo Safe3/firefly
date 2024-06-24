@@ -61,7 +61,7 @@
 
 ## :rocket: 使用
 
-萤火虫支持Linux x86、ARM等CPU架构环境，萤火虫服务端和WireGuard客户端下载地址:  https://github.com/Safe3/firefly/releases  ,其中以firefly-x-x开头的是服务端，包含wireguard名称的是客户端。
+萤火虫支持Linux x86、ARM等CPU架构，服务端和WireGuard客户端下载地址:  https://github.com/Safe3/firefly/releases  。
 
 
 
