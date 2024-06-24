@@ -131,7 +131,7 @@ docker compose up -d
 
 - ### 客户端安装
 
-萤火虫的客户端为WireGuard官方客户端，支持Windows、Linux、Mac、iOS、Android，这里以Windows为例，对应的客户端为wireguard-amd64-0.5.3.msi ，下载后根据提示一步步安装。
+萤火虫支持所有原生WireGuard官方客户端，包括Windows、Linux、Mac、iOS、Android，这里以Windows为例，对应的客户端为wireguard-amd64-0.5.3.msi ，下载后根据提示一步步安装。
 
 
 
