@@ -37,15 +37,15 @@
 
 ## :dart: 特色
 
- :green_circle: 提供简单、易用的web管理后台
+ :green_circle: 提供美观且简单、易用的web管理后台
 
- :purple_circle: 支持所有 WireGuard 客户端接入
+ :purple_circle: 支持所有原生 WireGuard 客户端接入
 
- :yellow_circle: 无需系统安装 WireGuard 组件
+ :yellow_circle: 小巧轻量级，不到10M大小，不依赖WireGuard
 
- :orange_circle: go语言开发，单文件、无额外库依赖
+ :orange_circle: go语言开发，单文件、高性能、支持多CPU架构
 
- :red_circle: 自动申请免费SSL证书
+ :red_circle: 支持自动申请免费SSL证书并续期
 
  :large_blue_circle: 支持TCP协议中转，防UDP QoS限流（高级版）
 
@@ -67,24 +67,24 @@
 
 - ### 服务端安装
 
-准备一台公网IP服务器，选择对应的CPU架构，如x86环境请下载firefly-linux-amd64
+准备一台公网IP服务器，选择对应的CPU架构，如x86 64环境请下载firefly
 
 添加可执行权限：
 
 ```bash
-chmod +x ./firefly-linux-amd64
+chmod +x ./firefly
 ```
 
 前台运行：
 
 ```bash
-./firefly-linux-amd64
+./firefly
 ```
 
 后台运行：
 
 ```bash
-nohup ./firefly-linux-amd64 >/dev/null 2>&1 &
+nohup ./firefly >/dev/null 2>&1 &
 ```
 
 容器中运行：下载docker-compose.yml文件然后执行

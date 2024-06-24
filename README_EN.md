@@ -62,24 +62,24 @@ Firefly supports CPU architecture environments such as Linux x86 and ARM. The do
 
 - ### Server Installation
 
-Select the corresponding public server, such as x86 environment, please download firefly-linux-amd64
+Select the corresponding public server, such as x86 environment, please download firefly
 
 Add executable permissions：
 
 ```bash
-chmod +x ./firefly-linux-amd64
+chmod +x ./firefly
 ```
 
 Run frontend：
 
 ```bash
-./firefly-linux-amd64
+./firefly
 ```
 
 Run backend：
 
 ```bash
-nohup ./firefly-linux-amd64 >/dev/null 2>&1 &
+nohup ./firefly >/dev/null 2>&1 &
 ```
 
 Run in container：download docker-compose.yml and execute 
