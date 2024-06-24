@@ -43,11 +43,11 @@
 
  :yellow_circle: 无需系统安装 WireGuard 组件
 
- :orange_circle: 单文件、无额外库依赖
+ :orange_circle: go语言开发，单文件、无额外库依赖
 
  :red_circle: 自动申请免费SSL证书
 
- :large_blue_circle: TCP中转代理防UDP限流（高级版）
+ :large_blue_circle: 支持TCP协议中转，防UDP QoS限流（高级版）
 
 
 
@@ -106,7 +106,7 @@ docker compose up -d
 
 ```json
 {
- "version": 3.1,              // 萤火虫当前版本
+ "version": 4.0,              // 萤火虫当前版本
  "host": "7.7.7.7",           // 萤火虫web管理后台ip或域名，默认为自动获取的公网ip
  "port": 50121,               // 萤火虫web管理后台端口
  "auto_ssl": false,           // 萤火虫web管理后台是否启用自动获取Let's Encrypt签发证书，若启用请将web端口改为443
@@ -122,7 +122,8 @@ docker compose up -d
  "wg_persistent_keepalive": 25,         // 萤火虫客户端存活包发送间隔时间
  "wg_address": "198.18.0.1/16",         // 萤火虫客户端虚拟ip网段范围
  "wg_dns": "1.1.1.1",                   // 萤火虫客户端dns配置
- "wg_allowed_ips": "0.0.0.0/0, ::/0"    // 萤火虫客户端要转发流量到服务端的ip地址范围，默认所有流量
+ "wg_allowed_ips": "0.0.0.0/0, ::/0",   // 萤火虫客户端要转发流量到服务端的ip地址范围，默认所有流量
+ "wg_proxy_address": ":50122"           // 萤火虫TCP协议中转监听地址，可防止UDP QoS限流
 }
 ```
 
