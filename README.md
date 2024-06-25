@@ -109,7 +109,7 @@ docker compose up -d
  "version": 4.0,              // 萤火虫当前版本
  "host": "7.7.7.7",           // 萤火虫web管理后台ip或域名，默认为自动获取的公网ip
  "port": 50121,               // 萤火虫web管理后台端口
- "auto_ssl": false,           // 萤火虫web管理后台是否启用自动获取Let's Encrypt签发证书，若启用请将web端口改为443
+ "auto_ssl": false,           // 萤火虫web是否启用自动申请免费SSL证书并续期，启用前将web端口改为443并配置host为域名
  "password": "firefly",       // 萤火虫web管理后台登录认证密码
  "lang": "en",                // 萤火虫web管理后台多语言支持，中文请将en改为cn
  "ui_traffic_stats": true,    // 萤火虫web管理后台是否开启流量图特效
