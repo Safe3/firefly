@@ -131,7 +131,7 @@ docker compose up -d
 
 - ### 客户端安装
 
-萤火虫支持所有原生WireGuard官方客户端，包括Windows、Linux、Mac、iOS、Android，这里以Windows为例，对应的客户端为wireguard-amd64-0.5.3.msi ，下载后根据提示一步步安装。
+萤火虫支持所有原生WireGuard官方客户端，包括Windows、Linux、Mac、iOS、Android，下载地址：[https://github.com/Safe3/firefly/releases](https://github.com/Safe3/firefly/releases) ，根据提示一步步安装。
 
 
 
@@ -141,9 +141,11 @@ docker compose up -d
 
 1.移动客户端可直接扫描萤火虫后台二维码导入配置
 
-2.PC客户端可下载萤火虫后台配置文件到本地后导入配置
+2.Windows、Mac客户端可下载萤火虫后台配置文件到本地后从WireGuard界面导入配置
 
-两个客户端开启之后，可以通过萤火虫服务端分配的ip 198.18.0.x 直接相互访问
+3.Linux客户端将配置文件保存到/etc/wireguard/firefly.conf，执行wg-quick up firefly启动wireguard
+
+两个客户端启动之后，可以通过萤火虫服务端分配的ip 198.18.0.x 直接相互访问
 
 
 
