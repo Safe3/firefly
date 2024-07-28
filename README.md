@@ -143,7 +143,7 @@ docker compose up -d
 
 2.Windows、Mac客户端可下载萤火虫后台配置文件到本地后从WireGuard界面导入配置
 
-3.Linux客户端将配置文件保存到/etc/wireguard/firefly.conf，执行wg-quick up firefly启动wireguard
+3.Linux客户端将配置文件保存到/etc/wireguard/firefly.conf，执行wg-quick up firefly启动wireguard，开机自启动systemctl enable wg-quick@firefly
 
 两个客户端启动之后，可以通过萤火虫服务端分配的ip 198.18.0.x 直接相互访问
 
