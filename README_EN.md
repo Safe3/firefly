@@ -115,7 +115,7 @@ The first time running firefly will generate a conf/config.json configuration fi
  "wg_port": 50120,                      // WireGuard server UDP port
  "wg_mtu": 1280,                        // WireGuard server MTU value
  "wg_persistent_keepalive": 25,         // WireGuard client keepalive packet sending interval time
- "wg_address": "198.18.0.1/16",         // WireGuard client virtual IP network range
+ "wg_address": "198.18.0.1/15",         // WireGuard client virtual IP network range
  "wg_dns": "1.1.1.1",                   // WireGuard client DNS configuration
  "wg_allowed_ips": "0.0.0.0/0, ::/0"    // WireGuard client allowed ips
 }
