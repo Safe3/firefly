@@ -47,6 +47,8 @@ Firefly is a simple and easy to install WireGuard server software, which can be 
 
  :red_circle: Automatically apply for free SSL certificate
 
+ :large_blue_circle: Support TCP protocol relay and prevent UDP QoS flow limitation (advanced version)
+
 <h3 align="center">
   <img src="https://github.com/Safe3/firefly/blob/main/firefly.png" alt="firefly" width="700px">
   <br>
@@ -117,7 +119,8 @@ The first time running firefly will generate a conf/config.json configuration fi
  "wg_persistent_keepalive": 25,         // WireGuard client keepalive packet sending interval time
  "wg_address": "198.18.0.1/15",         // WireGuard client virtual IP network range
  "wg_dns": "1.1.1.1",                   // WireGuard client DNS configuration
- "wg_allowed_ips": "0.0.0.0/0, ::/0"    // WireGuard client allowed ips
+ "wg_allowed_ips": "0.0.0.0/0, ::/0",   // WireGuard client allowed ips
+ "wg_proxy_address": ":50122"           // TCP relay listening address,which can prevent UDP QoS flow limitation
 }
 ```
 
