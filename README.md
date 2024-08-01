@@ -61,7 +61,7 @@
 
 ## :rocket: 使用
 
-萤火虫支持Linux x86、ARM，服务端和WireGuard客户端下载地址:  https://github.com/Safe3/firefly/releases  。
+萤火虫支持Linux x86、ARM CPU架构，服务端和客户端下载地址:  https://github.com/Safe3/firefly/releases  。
 
 
 
@@ -131,7 +131,7 @@ docker compose up -d
 
 - ### 客户端安装
 
-萤火虫支持所有原生WireGuard官方客户端，包括Windows、Linux、Mac、iOS、Android，下载地址：[https://github.com/Safe3/firefly/releases](https://github.com/Safe3/firefly/releases) ，根据提示一步步安装。
+萤火虫支持所有原生WireGuard官方和第三方客户端，包括Windows、Linux、Mac、iOS、Android，下载地址：[https://github.com/Safe3/firefly/releases](https://github.com/Safe3/firefly/releases) ，根据提示一步步安装。
 
 
 
