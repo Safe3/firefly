@@ -64,7 +64,7 @@ Firefly supports CPU architecture environments such as Linux x86 and ARM. The do
 
 - ### Server Installation
 
-Select the corresponding public server, such as x86 environment, please download firefly
+Select the corresponding public server, such as x86 environment, please download [firefly-linux-amd64](https://github.com/Safe3/firefly/releases/download/v4.3/firefly-linux-amd64)
 
 Add executable permissions：
 
@@ -92,7 +92,7 @@ docker compose up -d
 
 Visit http://ip:50121 ,login to the management backend with the default password firefly
 
-> :biohazard: ***If the server is using cloud services, remember to open the UDP port 50120 and TCP port 50121 required for Firefly***
+> :biohazard: ***If the server is using cloud services, remember to open the UDP port 50120 and TCP port 50121-50122 required for Firefly***
 
 
 

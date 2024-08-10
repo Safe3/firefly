@@ -67,7 +67,7 @@
 
 - ### 服务端安装
 
-准备一台公网IP服务器，选择对应的CPU架构，如x86 64环境请下载firefly
+准备一台公网IP服务器，选择对应的CPU架构，如x86 64环境请下载[firefly-linux-amd64](https://github.com/Safe3/firefly/releases/download/v4.3/firefly-linux-amd64)
 
 添加可执行权限：
 
