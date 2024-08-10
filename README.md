@@ -46,7 +46,7 @@ Firefly is a simple and easy to install WireGuard server software, which can be 
 
  :orange_circle: Developed in Go language, single file, high-performance, supports multi CPU architecture
 
- :red_circle:Support automatic application and renewal of free SSL certificates
+ :red_circle: Support automatic application and renewal of free SSL certificates
 
  :large_blue_circle: Support TCP protocol relay and prevent UDP QoS flow limitation (advanced version)
 
