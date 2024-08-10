@@ -2,7 +2,7 @@
   <br>
   <img src="https://github.com/Safe3/firefly/blob/main/logo.png" alt="firefly" width="70px">
 </h1>
-<h4 align="center">萤火虫 WireGuard Server</h4>
+<h4 align="center">Firefly WireGuard Server</h4>
 
 <p align="center">
 <a href="https://github.com/Safe3/firefly/releases"><img src="https://img.shields.io/github/downloads/Safe3/firefly/total">
@@ -12,173 +12,152 @@
 <a href="https://github.com/Safe3/firefly/discussions"><img src="https://img.shields.io/github/discussions/Safe3/firefly">
 </p>
 <p align="center">
-  <a href="#dart-特色">特色</a> •
-  <a href="#rocket-使用">使用</a> •
-  <a href="#gift_heart-感谢">感谢</a> •
-  <a href="#kissing_heart-联系">联系</a> •
-  <a href="#key-授权">授权</a>
+  <a href="#dart-features">Features</a> •
+  <a href="#rocket-usage">Usage</a> •
+  <a href="#gift_heart-credits">Credits</a> •
+  <a href="#kissing_heart-contact">Contact</a> •
+  <a href="#key-license">License</a>
 </p>
 
 
 
 
+
+
 <p align="center">
-  <a href="https://github.com/Safe3/firefly/blob/main/README.md">中文</a>
-  <a href="https://github.com/Safe3/firefly/blob/main/README_EN.md">English</a>
+  <a href="https://github.com/Safe3/firefly/blob/main/README.md">English</a>
+  <a href="https://github.com/Safe3/firefly/blob/main/README_CN.md">中文</a>
 </p>
 
 
 
 ---
 
-最简单易用的轻量级、高性能 WireGuard 服务端软件，可广泛用于异地组网、远程办公、内网穿透等场景。
+Firefly is a simple and easy to install WireGuard server software, which can be widely used in scenarios such as remote networking, remote work, and  expose a local server behind a NAT or firewall to the internet.
 
 
 
-## :dart: 特色
+## :dart: Features
+:green_circle: Provide a simple and easy-to-use web management UI
 
- :green_circle: 提供美观且简单、易用的web管理后台
+ :purple_circle: Supports access to all WireGuard clients
 
- :purple_circle: 支持所有原生 WireGuard 客户端接入
+ :yellow_circle: No need for system installation of WireGuard components
 
- :yellow_circle: 小巧轻量级，不到10M大小，不依赖WireGuard
+ :orange_circle: Single file, no additional library dependencies
 
- :orange_circle: go语言开发，单文件、高性能、支持多CPU架构
+ :red_circle: Automatically apply for free SSL certificate
 
- :red_circle: 支持自动申请免费SSL证书并续期
-
- :large_blue_circle: 支持TCP协议中转，防UDP QoS限流（高级版）
-
-
+ :large_blue_circle: Support TCP protocol relay and prevent UDP QoS flow limitation (advanced version)
 
 <h3 align="center">
-  <img src="https://github.com/Safe3/firefly/blob/main/firefly_cn.png" alt="firefly" width="700px">
+  <img src="https://github.com/Safe3/firefly/blob/main/firefly.png" alt="firefly" width="700px">
   <br>
 </h3>
 
 
+ 
+
+## :rocket: Usage
+
+Firefly supports CPU architecture environments such as Linux x86 and ARM. The download address for the Firefly server is: https://github.com/Safe3/firefly/releases , WireGuard client download address: https://www.wireguard.com/install/ .
 
 
-## :rocket: 使用
+- ### Server Installation
 
-萤火虫支持Linux x86、ARM CPU架构，服务端和客户端下载地址:  https://github.com/Safe3/firefly/releases  。
+Select the corresponding public server, such as x86 environment, please download [firefly-linux-amd64](https://github.com/Safe3/firefly/releases/download/v4.3/firefly-linux-amd64)
 
-
-
-- ### 服务端安装
-
-准备一台公网IP服务器，选择对应的CPU架构，如x86 64环境请下载[firefly-linux-amd64](https://github.com/Safe3/firefly/releases/download/v4.3/firefly-linux-amd64)
-
-添加可执行权限：
+Add executable permissions：
 
 ```bash
 chmod +x ./firefly
 ```
 
-前台运行：
+Run frontend：
 
 ```bash
 ./firefly
 ```
 
-后台运行：
+Run backend：
 
 ```bash
 nohup ./firefly >/dev/null 2>&1 &
 ```
 
-容器中运行：下载docker-compose.yml文件然后执行
+Run in container：download docker-compose.yml and execute 
 
 ```bash
 docker compose up -d
 ```
 
-访问 http://ip:50121 登录管理后台，默认密码firefly
+Visit http://ip:50121 ,login to the management backend with the default password firefly
 
-> :biohazard: ***如果服务器使用的是各种云服务，记得在云服务管理后台上开放萤火虫所需的udp端口50120、tcp端口50121和50122***
-
-
-
-- ### 服务端配置
+> :biohazard: ***If the server is using cloud services, remember to open the UDP port 50120 and TCP port 50121-50122 required for Firefly***
 
 
-首次运行firefly会在软件目录生成conf/config.json配置文件，配置说明如下：
+
+
+- ### Server Configuration
+
+The first time running firefly will generate a conf/config.json configuration file in the software root directory, as follows:
 
 ```json
 {
- "version": 4.0,              // 萤火虫当前版本
- "host": "7.7.7.7",           // 萤火虫web管理后台ip或域名，默认为自动获取的公网ip
- "port": 50121,               // 萤火虫web管理后台端口
- "auto_ssl": false,           // 萤火虫web是否启用自动申请免费SSL证书并续期，启用前将web端口改为443并配置host为域名
- "password": "firefly",       // 萤火虫web管理后台登录认证密码
- "lang": "en",                // 萤火虫web管理后台多语言支持，中文请将en改为cn
- "ui_traffic_stats": true,    // 萤火虫web管理后台是否开启流量图特效
- "ui_chart_type": 2,          // 萤火虫web管理后台流量特效图类型
- "log_level": "error",        // 萤火虫服务端日志记录等级
- "wg_private_key": "YBw5KAo1vM2mz35GLhZB01ZNYWJYWdGZNQT1MebuCHk=",  // 萤火虫服务端 WireGuard 私钥
- "wg_device": "eth0",                   // 萤火虫服务端 WireGuard 出入流量网卡名称
- "wg_port": 50120,                      // 萤火虫服务端 WireGuard UDP端口
- "wg_mtu": 1280,                        // 萤火虫服务端 WireGuard MTU值
- "wg_persistent_keepalive": 25,         // 萤火虫客户端存活包发送间隔时间
- "wg_address": "198.18.0.1/15",         // 萤火虫客户端虚拟ip网段范围
- "wg_dns": "1.1.1.1",                   // 萤火虫客户端dns配置
- "wg_allowed_ips": "0.0.0.0/0, ::/0",   // 萤火虫客户端要转发流量到服务端的ip地址范围，默认所有流量
- "wg_proxy_address": ":50122"           // 萤火虫TCP协议中转监听地址，可防止UDP QoS限流
+ "version": 3.1,              // Firefly current version
+ "host": "7.7.7.7",           // Firefly web management IP or domain name
+ "port": 50121,               // Firefly web management port
+ "auto_ssl": false,           // Is the firefly web enabled to automatically obtain Let's Encrypt certificate issuance? If enabled, please change the port to 443
+ "password": "firefly",       // Firefly web management login authentication password
+ "lang": "en",                // Firefly web management UI language
+ "ui_traffic_stats": true,    // Firefly web management traffic chart switch
+ "ui_chart_type": 2,          // Firefly web management traffic chart type
+ "log_level": "error",        // Firefly server logging level
+ "wg_private_key": "YBw5KAo1vM2mz35GLhZB01ZNYWJYWdGZNQT1MebuCHk=",  // WireGuard server private key
+ "wg_device": "eth0",                   // WireGuard server in/out traffic network card name
+ "wg_port": 50120,                      // WireGuard server UDP port
+ "wg_mtu": 1280,                        // WireGuard server MTU value
+ "wg_persistent_keepalive": 25,         // WireGuard client keepalive packet sending interval time
+ "wg_address": "198.18.0.1/15",         // WireGuard client virtual IP network range
+ "wg_dns": "1.1.1.1",                   // WireGuard client DNS configuration
+ "wg_allowed_ips": "0.0.0.0/0, ::/0",   // WireGuard client allowed ips
+ "wg_proxy_address": ":50122"           // TCP relay listening address,which can prevent UDP QoS flow limitation
 }
 ```
 
 
 
-- ### 客户端安装
+- ### Client configuration
 
-萤火虫支持所有原生WireGuard官方和第三方客户端，包括Windows、Linux、Mac、iOS、Android，下载地址：[https://github.com/Safe3/firefly/releases](https://github.com/Safe3/firefly/releases) ，根据提示一步步安装。
+After creating multiple clients in the web management UI on the server side, import the WireGuard client configuration in the following way.
 
+1.WireGuard mobile client can directly scan the firefly web QR code to import configuration
 
-
-- ### 客户端配置
-
-登录萤火虫服务端web管理后台，新建2个客户端，通过以下方式导入WireGuard客户端配置。
-
-1.移动客户端可直接扫描萤火虫后台二维码导入配置
-
-2.Windows、Mac客户端可下载萤火虫后台配置文件到本地后从WireGuard界面导入配置
-
-3.Linux客户端将配置文件保存到/etc/wireguard/firefly.conf，执行wg-quick up firefly启动wireguard，开机自启动systemctl enable wg-quick@firefly
-
-两个客户端启动之后，可以通过萤火虫服务端分配的ip 198.18.0.x 直接相互访问
+2.WireGuard PC client can download the firefly web configuration file to the local device and import the configuration
 
 
 
-## :gift_heart: 感谢
 
-由于开源后社区贡献代码为零，本项目不再开源。此repo仅供反馈bug和提建议，请支持萤火虫的朋友点个 :heart: 赞！
+
+## :gift_heart: Credits
+
+Thanks to all the amazing [community contributors for sending PRs](https://github.com/Safe3/firefly/graphs/contributors) and keeping this project updated. ❤️
+
+If you have an idea or some kind of improvement, you are welcome to contribute and participate in the Project, feel free to send your PR.
 
 <p align="center">
 <a href="https://github.com/Safe3/firefly/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=Safe3/firefly&max=500">
 </a>
 </p>
-捐赠请扫描如下二维码：
-<img src="https://waf.uusec.com/_media/sponsor.jpg" alt="捐赠"  height="300px" />
+
+## :kissing_heart: Contact
+
+If you want to support more features such as access controling, advanced routing, bastion machines, peer-to-peer transmission, etc., please contact us.
 
 
 
-## :kissing_heart: 联系
+## :key: License
 
-若想支持更多功能，如权限分组、高级路由、堡垒机、点对点传输等，请访问鹊桥: https://qq.uusec.com
+Firefly is only for personal free use. The front-end of this project is sourced from [wg easy]( https://github.com/wg-easy/wg-easy) , follow the original project CC 4.0 license, thanks for the original auther Emile Nijssen！
 
-- 问题提交：https://github.com/Safe3/firefly/issues
-
-- 讨论社区：https://github.com/Safe3/firefly/discussions
-
-- 官方 QQ 群：11500614
-
-- 官方微信群：微信扫描以下二维码加入
-
-  <img src="https://waf.uusec.com/_media/weixin.jpg" alt="微信群"  height="200px" />
-
-
-
-## :key: 授权
-
-萤火虫仅限于个人免费使用！
