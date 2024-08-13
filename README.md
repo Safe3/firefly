@@ -60,7 +60,7 @@ Firefly is a simple and easy to install WireGuard server software, which can be 
 
 ## :rocket: Usage
 
-Firefly supports CPU architecture environments such as Linux x86 and ARM. The download address for the Firefly server is: https://github.com/Safe3/firefly/releases , WireGuard client download address: https://www.wireguard.com/install/ .
+Firefly supports CPU architecture environments such as Linux x86 and ARM. The download address for the Firefly server and WireGuard clients is: https://github.com/Safe3/firefly/releases .
 
 
 - ### Server Installation
@@ -104,7 +104,7 @@ The first time running firefly will generate a conf/config.json configuration fi
 
 ```json
 {
- "version": 3.1,              // Firefly current version
+ "version": 4.3,              // Firefly current version
  "host": "7.7.7.7",           // Firefly web management IP or domain name
  "port": 50121,               // Firefly web management port
  "auto_ssl": false,           // Is the firefly web enabled to automatically obtain Let's Encrypt certificate issuance? If enabled, please change the port to 443

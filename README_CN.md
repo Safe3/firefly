@@ -106,7 +106,7 @@ docker compose up -d
 
 ```json
 {
- "version": 4.0,              // 萤火虫当前版本
+ "version": 4.3,              // 萤火虫当前版本
  "host": "7.7.7.7",           // 萤火虫web管理后台ip或域名，默认为自动获取的公网ip
  "port": 50121,               // 萤火虫web管理后台端口
  "auto_ssl": false,           // 萤火虫web是否启用自动申请免费SSL证书并续期，启用前将web端口改为443并配置host为域名
