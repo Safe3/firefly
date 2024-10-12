@@ -1,8 +1,8 @@
 FROM alpine:latest
 
 LABEL org.opencontainers.image.title="firefly" \
-      org.opencontainers.image.version="v2.0" \
-      org.opencontainers.image.description="Firefly WireGuard server" \
+      org.opencontainers.image.version="v4.3" \
+      org.opencontainers.image.description="Firefly WireGuard Server" \
       org.opencontainers.image.licenses="MIT" \
       org.opencontainers.image.source="https://github.com/Safe3/firefly"
 
