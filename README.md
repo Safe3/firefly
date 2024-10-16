@@ -73,13 +73,13 @@ Add executable permissions：
 chmod +x ./firefly
 ```
 
-Run frontend：
+Run it：
 
 ```bash
 ./firefly
 ```
 
-Run backend：
+Run in background：
 
 ```bash
 nohup ./firefly >/dev/null 2>&1 &
