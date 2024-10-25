@@ -153,7 +153,7 @@ If you have an idea or some kind of improvement, you are welcome to contribute a
 
 ## :kissing_heart: Contact
 
-If you want to support more features such as access controling, advanced routing, bastion machines, peer-to-peer transmission, etc., please contact us.
+If you want to support more features such as access controling, advanced routing, bastion machines, peer-to-peer transmission, etc, please contact us.
 
 
 
