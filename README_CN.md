@@ -33,7 +33,7 @@
 
 最简单易用的轻量级、高性能 WireGuard 服务端软件，可广泛用于异地组网、远程办公、内网穿透等场景。
 
-🏠 在线全功能SAAS版请访问官网：https://qq.uusec.com/
+🏠 全功能在线SAAS版请访问官网：https://qq.uusec.com/
 
 <h3 align="center">
   <img src="https://github.com/Safe3/firefly/blob/main/firefly_cn.png" alt="firefly" width="700px">
