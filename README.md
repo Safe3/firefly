@@ -35,7 +35,10 @@
 
 Firefly is a simple and easy to install WireGuard server software, which can be widely used in scenarios such as remote networking, remote work, and  expose a local server behind a NAT or firewall to the internet.
 
-
+<h3 align="center">
+  <img src="https://github.com/Safe3/firefly/blob/main/firefly.png" alt="firefly" width="700px">
+  <br>
+</h3>
 
 ## :dart: Features
 :green_circle: Provide a beautiful, simple, and easy-to-use web management UI
@@ -49,14 +52,6 @@ Firefly is a simple and easy to install WireGuard server software, which can be 
  :red_circle: Support automatic application and renewal of free SSL certificates
 
  :large_blue_circle: Support TCP protocol relay and prevent UDP QoS flow limitation (advanced version)
-
-<h3 align="center">
-  <img src="https://github.com/Safe3/firefly/blob/main/firefly.png" alt="firefly" width="700px">
-  <br>
-</h3>
-
-
- 
 
 ## :rocket: Usage
 
