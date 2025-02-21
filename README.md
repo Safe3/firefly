@@ -25,11 +25,11 @@
 
 
 <p align="center">
-  <a href="https://github.com/Safe3/firefly/blob/main/README.md">English</a>
   <a href="https://github.com/Safe3/firefly/blob/main/README_CN.md">中文</a>
   <br/><br/>
   ⭐Please help us with a star to support our continuous improvement, thank you!
 </p>
+
 
 
 
@@ -73,13 +73,13 @@ mkdir -p /opt/firefly && mv firefly-linux-amd64 /opt/firefly/firefly
 Install as a service：
 
 ```bash
-chmod +x /opt/firefly/firefly && /opt/firefly/firefly -s install
+chmod +x /opt/firefly/firefly && sudo /opt/firefly/firefly -s install
 ```
 
 Start firefly service：
 
 ```bash
-/opt/firefly/firefly -s start
+sudo /opt/firefly/firefly -s start
 ```
 
 If you want to run it in a container, just download docker-compose.yml and execute the following:

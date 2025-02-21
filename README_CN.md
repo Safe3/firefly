@@ -23,11 +23,11 @@
 
 
 <p align="center">
-  <a href="https://github.com/Safe3/firefly/blob/main/README_CN.md">中文</a>
   <a href="https://github.com/Safe3/firefly/blob/main/README.md">English</a>
   <br/><br/>
   ⭐请帮我们点个star以支持我们不断改进，谢谢！
 </p>
+
 
 
 
@@ -75,13 +75,13 @@ mkdir -p /opt/firefly && mv firefly-linux-amd64 /opt/firefly/firefly
 服务安装：
 
 ```bash
-chmod +x /opt/firefly/firefly && /opt/firefly/firefly -s install
+chmod +x /opt/firefly/firefly && sudo /opt/firefly/firefly -s install
 ```
 
 启动运行：
 
 ```bash
-/opt/firefly/firefly -s start
+sudo /opt/firefly/firefly -s start
 ```
 
 如果你想使用容器版，可以下载docker-compose.yml文件然后执行如下命令启动：
