@@ -46,7 +46,7 @@
 
  :purple_circle: 支持所有原生 WireGuard 客户端接入
 
- :yellow_circle: 小巧轻量级，不到10M大小，不依赖WireGuard
+ :yellow_circle: 小巧轻量级，不到13M大小，不依赖WireGuard
 
  :orange_circle: go语言开发，单文件、高性能、支持多CPU架构
 
