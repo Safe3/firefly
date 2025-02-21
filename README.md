@@ -27,6 +27,8 @@
 <p align="center">
   <a href="https://github.com/Safe3/firefly/blob/main/README.md">English</a>
   <a href="https://github.com/Safe3/firefly/blob/main/README_CN.md">中文</a>
+  <br/><br/>
+  ⭐Please help us with a star to support our continuous improvement, thank you!
 </p>
 
 
