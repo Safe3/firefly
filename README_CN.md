@@ -67,13 +67,13 @@
 前期准备：
 
 ```bash
-mkdir -p /opt/firefly && mv firefly-linux-amd64 /opt/firefly/firefly && chmod +x /opt/firefly/firefly
+mkdir -p /opt/firefly && mv firefly-linux-amd64 /opt/firefly/firefly
 ```
 
 服务安装：
 
 ```bash
-/opt/firefly/firefly -s install
+chmod +x /opt/firefly/firefly && /opt/firefly/firefly -s install
 ```
 
 启动运行：

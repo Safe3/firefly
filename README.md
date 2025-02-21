@@ -62,16 +62,16 @@ Firefly supports CPU architecture environments such as Linux x86 and ARM. The do
 
 Select the corresponding binary, such as x86 environment, please download [firefly-linux-amd64](https://github.com/Safe3/firefly/releases/download/v4.4/firefly-linux-amd64)
 
-Prepare：
+Prepare to install：
 
 ```bash
-mkdir -p /opt/firefly && mv firefly-linux-amd64 /opt/firefly/firefly && chmod +x /opt/firefly/firefly
+mkdir -p /opt/firefly && mv firefly-linux-amd64 /opt/firefly/firefly 
 ```
 
 Install as a service：
 
 ```bash
-/opt/firefly/firefly -s install
+chmod +x /opt/firefly/firefly && /opt/firefly/firefly -s install
 ```
 
 Start firefly service：
@@ -80,7 +80,7 @@ Start firefly service：
 /opt/firefly/firefly -s start
 ```
 
-If you want to run it in container, just download docker-compose.yml and execute 
+If you want to run it in a container, just download docker-compose.yml and execute the following:
 
 ```bash
 docker compose up -d
