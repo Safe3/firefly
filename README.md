@@ -45,7 +45,7 @@ Firefly is a simple and easy to install WireGuard server software, which can be 
 
  :purple_circle: Support all native WireGuard client access
 
- :yellow_circle: Compact and lightweight, less than 10M in size, does not rely on WireGuard
+ :yellow_circle: Compact and lightweight, less than 13M in size, does not rely on WireGuard
 
  :orange_circle: Developed in Go language, single file, high-performance, supports multi CPU architecture
 
@@ -60,33 +60,33 @@ Firefly supports CPU architecture environments such as Linux x86 and ARM. The do
 
 - ### Server Installation
 
-Select the corresponding public server, such as x86 environment, please download [firefly-linux-amd64](https://github.com/Safe3/firefly/releases/download/v4.3/firefly-linux-amd64)
+Select the corresponding binary, such as x86 environment, please download [firefly-linux-amd64](https://github.com/Safe3/firefly/releases/download/v4.4/firefly-linux-amd64)
 
-Add executable permissions：
-
-```bash
-chmod +x ./firefly
-```
-
-Run it：
+Prepare：
 
 ```bash
-./firefly
+mkdir -p /opt/firefly && mv firefly-linux-amd64 /opt/firefly/firefly && chmod +x /opt/firefly/firefly
 ```
 
-Run in background：
+Install as a service：
 
 ```bash
-nohup ./firefly >/dev/null 2>&1 &
+/opt/firefly/firefly -s install
 ```
 
-Run in container：download docker-compose.yml and execute 
+Start firefly service：
+
+```bash
+/opt/firefly/firefly -s start
+```
+
+If you want to run it in container, just download docker-compose.yml and execute 
 
 ```bash
 docker compose up -d
 ```
 
-Visit http://ip:50121 ,login to the management backend with the default password firefly
+Visit http://ip:50121 ,login to the management with the default password firefly
 
 > :biohazard: ***If the server is using cloud services, remember to open the UDP port 50120 and TCP port 50121-50122 required for Firefly***
 
@@ -114,7 +114,7 @@ The first time running firefly will generate a conf/config.json configuration fi
  "wg_mtu": 1280,                        // WireGuard server MTU value
  "wg_persistent_keepalive": 25,         // WireGuard client keepalive packet sending interval time
  "wg_address": "198.18.0.1/15",         // WireGuard client virtual IP network range
- "wg_dns": "1.1.1.1",                   // WireGuard client DNS configuration
+ "wg_dns": "8.8.8.8",                   // WireGuard client DNS configuration
  "wg_allowed_ips": "0.0.0.0/0, ::/0",   // WireGuard client allowed ips
  "wg_proxy_address": ":50122"           // TCP relay listening address,which can prevent UDP QoS flow limitation
 }
@@ -154,5 +154,5 @@ If you want to support more features such as access controling, advanced routing
 
 ## :key: License
 
-Firefly is only for personal free use. The front-end of this project is sourced from [wg easy]( https://github.com/wg-easy/wg-easy) , follow the original project CC 4.0 license, thanks for the original auther Emile Nijssen！
+Firefly is only for personal free use. The front-end of this project is modified from wg easy , follow the original project CC 4.0 license, thanks for the original auther Emile Nijssen！
 

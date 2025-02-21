@@ -62,27 +62,27 @@
 
 - ### 服务端安装
 
-准备一台公网IP服务器，选择对应的CPU架构，如x86 64环境请下载[firefly-linux-amd64](https://github.com/Safe3/firefly/releases/download/v4.3/firefly-linux-amd64)
+准备一台公网IP服务器，选择对应的CPU架构的二进制文件，如x86 64环境请下载[firefly-linux-amd64](https://github.com/Safe3/firefly/releases/download/v4.4/firefly-linux-amd64)
 
-添加可执行权限：
-
-```bash
-chmod +x ./firefly
-```
-
-前台运行：
+前期准备：
 
 ```bash
-./firefly
+mkdir -p /opt/firefly && mv firefly-linux-amd64 /opt/firefly/firefly && chmod +x /opt/firefly/firefly
 ```
 
-后台运行：
+服务安装：
 
 ```bash
-nohup ./firefly >/dev/null 2>&1 &
+/opt/firefly/firefly -s install
 ```
 
-容器中运行：下载docker-compose.yml文件然后执行
+启动运行：
+
+```bash
+/opt/firefly/firefly -s start
+```
+
+如果你想使用容器版，可以下载docker-compose.yml文件然后执行如下命令启动：
 
 ```bash
 docker compose up -d
@@ -116,7 +116,7 @@ docker compose up -d
  "wg_mtu": 1280,                        // 萤火虫服务端 WireGuard MTU值
  "wg_persistent_keepalive": 25,         // 萤火虫客户端存活包发送间隔时间
  "wg_address": "198.18.0.1/15",         // 萤火虫客户端虚拟ip网段范围
- "wg_dns": "1.1.1.1",                   // 萤火虫客户端dns配置
+ "wg_dns": "8.8.8.8",                   // 萤火虫客户端dns配置
  "wg_allowed_ips": "0.0.0.0/0, ::/0",   // 萤火虫客户端要转发流量到服务端的ip地址范围，默认所有流量
  "wg_proxy_address": ":50122"           // 萤火虫TCP协议中转监听地址，可防止UDP QoS限流
 }
