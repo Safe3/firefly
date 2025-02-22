@@ -106,7 +106,7 @@ The first time running firefly will generate a conf/config.json configuration fi
  "port": 50121,               // Firefly web management port
  "auto_ssl": false,           // Is the firefly web enabled to automatically obtain Let's Encrypt certificate issuance? If enabled, please change the port to 443
  "password": "firefly",       // Firefly web management login authentication password
- "lang": "en",                // Firefly web management UI language
+ "lang": "en",                // Firefly web management UI language, such as "en", "cn", "ru", "fr", "de", "ja", "ko", "tw", etc
  "ui_traffic_stats": true,    // Firefly web management traffic chart switch
  "ui_chart_type": 2,          // Firefly web management traffic chart type
  "log_level": "error",        // Firefly server logging level
