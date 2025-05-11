@@ -134,8 +134,6 @@ After creating multiple clients in the web management UI on the server side, imp
 
 
 
-
-
 ## :gift_heart: Credits
 
 Thanks to all the amazing [community contributors for sending PRs](https://github.com/Safe3/firefly/graphs/contributors) and keeping this project updated. ❤️
@@ -152,9 +150,6 @@ If you have an idea or some kind of improvement, you are welcome to contribute a
 
 If you want to support more features such as access controling, advanced routing, bastion machines, peer-to-peer transmission, etc, please contact us.
 
-- WeChat Group:  Scan the following QR code to join
-
-  <img src="https://waf.uusec.com/_media/weixin.jpg" alt="WeChat"  height="200px" />
 
 
 
