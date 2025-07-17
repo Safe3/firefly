@@ -133,7 +133,7 @@ After creating multiple clients in the web management UI on the server side, imp
 2.WireGuard PC client can download the firefly web configuration file to the local device and import the configuration
 
 
-## :1st_place_medal: Products
+## :1st_place_medal: Product List
 
 Other great products from us:
 
