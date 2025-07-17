@@ -133,6 +133,14 @@ After creating multiple clients in the web management UI on the server side, imp
 2.WireGuard PC client can download the firefly web configuration file to the local device and import the configuration
 
 
+## :1st_place_medal: Products
+
+Other great products from us:
+
+[UUSEC WAF](https://github.com/Safe3/uusec-waf) - An high-performance, AI and semantic technology Web Application Firewall and API Security Gateway (WAAP).
+
+[Openresty Manager](https://github.com/Safe3/openresty-manager) - The most simple, powerful and beautiful host management panel, open source alternative to OpenResty Edge.
+
 
 ## :gift_heart: Credits
 
