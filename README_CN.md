@@ -153,6 +153,8 @@ docker compose up -d
 
 [OpenResty管家](https://github.com/Safe3/openresty-manager) - 最简单易用、功能强大、漂亮的主机管理面板，OpenResty Edge 的开源替代品。
 
+[森罗万象](https://github.com/Safe3/CVS) - 强大的网络空间测绘、资产管理、漏洞扫描等全生命漏洞周期的综合攻击面管理平台，化繁为简，以一御百。
+
 
 ## :gift_heart: 感谢
 
