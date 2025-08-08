@@ -137,7 +137,7 @@ After creating multiple clients in the web management UI on the server side, imp
 
 Other great products from us:
 
-[UUSEC WAF](https://github.com/Safe3/uusec-waf) - An high-performance, AI and semantic technology Web Application Firewall and API Security Gateway (WAAP).
+[UUSEC WAF](https://github.com/Safe3/uusec-waf) - AI and semantic technology Web Application Firewall and API Security Gateway (WAAP).
 
 [OpenResty Manager](https://github.com/Safe3/openresty-manager) - The most simple, powerful and beautiful host management panel, open source alternative to OpenResty Edge.
 
